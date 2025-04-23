@@ -9,6 +9,15 @@ const firebaseConfig = {
     appId: "1:195999212818:web:11f8d4a149b7a2cb4d7fcb",
     measurementId: "G-2MPWYBQ8LR"
 };
+firebase.initializeApp(firebaseConfig);
+
+firebase.auth().signInAnonymously()
+  .then(() => {
+    console.log("Firebase initialized and signed in anonymously");
+  })
+  .catch((error) => {
+    console.error("Error signing in anonymously: ", error);
+  });
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
