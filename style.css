@@ -1,20 +1,245 @@
+:root {
+  --primary-color: #e8c4c4;
+  --secondary-color: #f2e2e2;
+  --accent-color: #c88ea7;
+  --text-color: #333;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    text-align: center;
-    padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.rings-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.invitation-text {
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--white) 0%, var(--secondary-color) 100%);
+}
+
+.invitation-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.divider {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: var(--accent-color);
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: var(--accent-color);
+}
+
+.attendance-form {
+  padding: 25px;
+  background: var(--white);
+}
+
+.attendance-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn.yes {
+  background-color: #8bc34a;
+  color: white;
+}
+
+.btn.no {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.message {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.message.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+  .invitation-text h1 {
+      font-size: 2rem;
   }
   
-  input[type="text"], select {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
+  .date {
+      font-size: 1.3rem;
   }
   
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+  .header-image {
+      height: 200px;
   }
+  
+  .invitation-text, .attendance-form {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+      padding: 10px;
+  }
+  
+  .invitation-text h1 {
+      font-size: 1.8rem;
+  }
+  
+  .btn {
+      padding: 12px;
+      font-size: 15px;
+  }
+}
+/* Роскошный стиль */
+.btn {
+  padding: 16px 30px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn.yes {
+  background: linear-gradient(to right, #e8c4c4, #c88ea7);
+  color: #5d2a42;
+  border: 1px solid #c88ea7;
+}
+
+.btn.no {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #5d2a42;
+  border: 1px solid #c88ea7;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255,255,255,0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1,1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+      transform: scale(0,0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(20,20);
+      opacity: 0;
+  }
+}
