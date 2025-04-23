@@ -1,5 +1,4 @@
 alert(123)
-// Firebase configuration (Замените на ваши данные!)
 const firebaseConfig = {
     apiKey: "AIzaSyAt3VdtvCexC5DcuvDv7ZXc-D1XoWXh0qM",
     authDomain: "guestlist-345f8.firebaseapp.com",
