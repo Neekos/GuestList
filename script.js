@@ -8,3 +8,24 @@ const firebaseConfig = {
     appId: "1:195999212818:web:11f8d4a149b7a2cb4d7fcb",
     measurementId: "G-2MPWYBQ8LR"
 };
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+const dataContainer = document.getElementById("dataContainer");
+
+db.collection("responses").orderBy("timestamp", "desc").get()
+  .then((querySnapshot) => {
+    dataContainer.innerHTML = ''; // Очистка контейнера
+
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const div = document.createElement('div');
+      div.textContent = `ФИО: ${data.name}, Ответ: ${data.answer}`;
+      dataContainer.appendChild(div);
+    });
+  })
+  .catch((error) => {
+    console.log("Error getting documents: ", error);
+    dataContainer.textContent = 'Ошибка загрузки данных.';
+  });
