@@ -9,11 +9,14 @@ const firebaseConfig = {
   appId: "1:195999212818:web:11f8d4a149b7a2cb4d7fcb",
   measurementId: "G-2MPWYBQ8LR"
 };
-firebase.initializeApp(firebaseConfig);
 document.getElementById('saveButton').addEventListener('click', function () {
+    console.log("Save button clicked!"); // Добавлено
+
     // Получение данных из формы
     var name = document.getElementById('name').value;
     var answer = document.getElementById('answer').value;
+
+    console.log("Name:", name, "Answer:", answer); // Добавлено
 
     // Создание ссылки на базу данных
     const ref = firebase.database().ref('responses');
@@ -24,6 +27,8 @@ document.getElementById('saveButton').addEventListener('click', function () {
         answer: answer,
         timestamp: new Date().getTime()
     };
+
+    console.log("Data to be saved:", newResponse); // Добавлено
 
     // Добавление данных в базу данных
     ref.push(newResponse)
