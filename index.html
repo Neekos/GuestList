@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Опрос</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Опрос</h1>
-    <label for="nameInput">ФИО:</label>
-    <input type="text" id="nameInput" placeholder="Ваше ФИО"><br><br>
+    <h1>Guest List</h1>
+    <form id="guestForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" name="answer"><br><br>
+        <button type="button" id="saveButton">Save</button>
+    </form>
 
-    <label for="answer">Ответ (Да/Нет):</label>
-    <select id="answer">
-        <option value="Да">Да</option>
-        <option value="Нет">Нет</option>
-    </select><br><br>
-
-    <button id="saveButton">Сохранить</button>
-
+    <!-- Firebase Libraries -->
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>  <!--  Исправлено: firebase-firestore.js  -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+
+    <!-- Your Script -->
     <script src="script.js"></script>
 </body>
-
 </html>
