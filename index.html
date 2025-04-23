@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Опрос</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Опрос</h1>
+    <label for="nameInput">ФИО:</label>
+    <input type="text" id="nameInput" placeholder="Ваше ФИО"><br><br>
+
+    <label for="answer">Ответ (Да/Нет):</label>
+    <select id="answer">
+        <option value="Да">Да</option>
+        <option value="Нет">Нет</option>
+    </select><br><br>
+
+    <button id="saveButton">Сохранить</button>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
