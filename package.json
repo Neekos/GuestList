@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url /dist"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3"
+  },
+  "dependencies": {
+    "firebase": "^11.6.0"
+  }
+}
