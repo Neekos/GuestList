@@ -1,25 +1,10 @@
-// Firebase configuration (Замените на ваши данные!)
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_('answer').value;
-
-    // Сохранение данных в Firestore
-    db.collection("responses").add({
-        name: name,
-        answer: answer,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp() // Добавляем timestamp
-    })
-        .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
-            alert('Данные сохранены!');
-            document.getElementById('nameInput').value = ''; // Очистка поля
-        })
-        .catch((error) => {
-            console.error("Error adding document: ", error);
-            alert('Ошибка сохранения данных!');
-        });
-});
+    apiKey: "AIzaSyAt3VdtvCexC5DcuuDv7ZXc-D1XoWXh0qM",
+    authDomain: "guestlist-345f8.firebaseapp.com",
+    projectId: "guestlist-345f8",
+    storageBucket: "guestlist-345f8.firebasestorage.app",
+    messagingSenderId: "195999212818",
+    appId: "1:195999212818:web:11f8d4a149b7a2cb4d7fcb",
+    measurementId: "G-2MPWYBQ8LR"
+};
