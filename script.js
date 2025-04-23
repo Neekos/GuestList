@@ -25,19 +25,15 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 document.getElementById('saveButton').addEventListener('click', function () {
-    const name = document.getElementById('nameInput').value;
-    const answer = document.getElementById('answer').value;
-
     // Сохранение данных в Firestore
     db.collection("responses").add({
-        name: name,
-        answer: answer,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp() // Добавляем timestamp
+        name: "Test Name",
+        answer: "Test Answer",
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
             alert('Данные сохранены!');
-            document.getElementById('nameInput').value = ''; // Очистка поля
         })
         .catch((error) => {
             console.error("Error adding document: ", error);
