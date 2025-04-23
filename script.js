@@ -9,6 +9,10 @@ const firebaseConfig = {
   appId: "1:195999212818:web:11f8d4a149b7a2cb4d7fcb",
   measurementId: "G-2MPWYBQ8LR"
 };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database(); // Получаем экземпляр database
 document.getElementById('saveButton').addEventListener('click', function () {
     console.log("Save button clicked!"); // Добавлено
 
