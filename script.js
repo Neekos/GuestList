@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <p class="couple-names">Андрей & Ксения</p>
                     <div class="divider">❤</div>    
                     <p class="greeting">${greeting}</p>
-                    <p class="invitation-line">Приглашаем на торжественную церемонию бракосочетания</p>
+                    <p class="invitation-line">Приглашаем Вас на торжественную церемонию бракосочетания</p>
                     
                     <div class="details">
                         <div class="date-container">
@@ -91,11 +91,11 @@ async function saveResponse(guestId, name1, name2, isComing, isPlural) {
     if (isPlural) {
         responseMessage = isComing
             ? `Спасибо! ${guestName}, мы вас ждём!`
-            : `Жаль, что ${guestName} не сможете прийти`;
+            : `Жаль, что вы не сможете прийти`;
     } else {
         responseMessage = isComing
-            ? `Спасибо! ${guestName}, мы тебя ждём!`
-            : `Жаль, что ${guestName} не сможешь прийти`;
+            ? `Спасибо! ${guestName}, мы вас ждём!`
+            : `Жаль, что вы не сможете прийти`;
     }
 
     try {
