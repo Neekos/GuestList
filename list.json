@@ -1,0 +1,71 @@
+{
+    "guests": {
+        "guest1": {
+            "name1": "Надежда",
+            "gender": "f"
+        },
+        "guest2": {
+            "name1": "Ирина",
+            "gender": "f"
+        },
+        "guest3": {
+            "name1": "Надежда",
+            "name2": "Сергей",
+            "gender": "mf"
+        },
+        "guest4": {
+            "name1": "Евгений",
+            "name2": "Олеся",
+            "gender": "mf"
+        },
+        "guest5": {
+            "name1": "Иван",
+            "name2": "Екатерина",
+            "gender": "mf"
+        },
+        "guest6": {
+            "name1": "Максим",
+            "name2": "Дарья",
+            "gender": "mf"
+        },
+        "guest7": {
+            "name1": "Варвара",
+            "name2": "Константин",
+            "gender": "mf"
+        },
+        "guest8": {
+            "name1": "Ольга",
+            "name2": "Вячеслав",
+            "gender": "mf"
+        },
+        "guest9": {
+            "name1": "Денис",
+            "name2": "Ирина",
+            "gender": "mf"
+        },
+        "guest10": {
+            "name1": "Юлия",
+            "name2": "Роман",
+            "gender": "mf"
+        },
+        "guest11": {
+            "name1": "Дарья",
+            "name2": "Василий",
+            "gender": "mf"
+        },
+        "guest12": {
+            "name1": "Елизовета",
+            "name2": "Никита",
+            "gender": "mf"
+        },
+        "guest13": {
+            "name1": "Максим",
+            "name2": "Виктория",
+            "gender": "mf"
+        },
+        "guest14": {
+            "name1": "Людмила Ивановна",
+            "gender": "f"
+        }
+    }
+}

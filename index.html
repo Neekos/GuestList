@@ -7,45 +7,34 @@
     <title>Приглашение на свадьбу</title>
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="background-image"></div>
     <div class="invitation-card">
-        <div class="header-image">
-            <img src="image.jpg" alt="Кольца на цветах" class="rings-image">
-        </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="invitation-text" id="invitationText">
+                <!-- Динамическое содержимое добавится через JS -->
+            </div>
 
-        <div class="invitation-text">
-            <h1>Андрей & Ксюша</h1>
-            <div class="divider">❤</div>
-            <p class="date">27.06.2025</p>
-            <p>Приглашаем вас разделить с нами радость нашего бракосочетания</p>
-            <p>Место: Центральный ЗАГС</p>
-            <p>Начало в 13:00</p>
-        </div>
-
-        <div class="attendance-form">
-            <h2>Подтвердите ваше присутствие</h2>
-            <form id="attendanceForm">
-                <input type="hidden" id="hiddenId">
-
-                <div class="input-group">
-                    <label for="nameInput">Ваше ФИО:</label>
-                    <input type="text" id="nameInput" placeholder="Иванов Иван Иванович" required>
-                </div>
-
+            <div class="attendance-form">
+                <h2>Подтвердите ваше присутствие</h2>
                 <div class="button-group">
-                    <button type="button" id="comingBtn" class="btn yes">С радостью приду</button>
-                    <button type="button" id="notComingBtn" class="btn no">К сожалению, не смогу</button>
+                    <button type="button" id="comingBtn" class="btn yes">
+                        <span>С радостью придём</span>
+                    </button>
+                    <button type="button" id="notComingBtn" class="btn no">
+                        <span>К сожалению, не сможем</span>
+                    </button>
                 </div>
-
                 <div id="message" class="message"></div>
-            </form>
+            </div>
         </div>
     </div>
-
     <script src="./script.js" type="module"></script>
 </body>
 
